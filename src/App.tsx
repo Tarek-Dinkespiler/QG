@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles.css";
+import { Navbar } from "./components/Navbar";
+import { Quiz } from "./components/Quiz";
 
 const App = () => (
-  <>
-    <h1 className="text-3xl">QG</h1>
-    <p>Petite application de jeux pour Raphaël</p>
-  </>
+  <div className="h-screen bg-dark grid-flow-col">
+    <Navbar />
+    <Quiz />
+  </div>
 );
 
 const root: HTMLElement = document.getElementById("root")!;
