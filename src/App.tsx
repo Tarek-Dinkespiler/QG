@@ -5,9 +5,11 @@ import { Navbar } from "./components/Navbar";
 import { Quiz } from "./components/Quiz";
 
 const App = () => (
-  <div className="h-screen bg-dark grid-flow-col">
+  <div className="h-screen w-screen bg-dark flex flex-col">
     <Navbar />
-    <Quiz />
+    <div className="flex flex-row justify-center">
+      <Quiz />
+    </div>
   </div>
 );
 
