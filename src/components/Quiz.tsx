@@ -2,13 +2,15 @@ import { useState } from "react";
 import { Question } from "./Question";
 import { Score } from "./Score";
 
+import type { Answers } from "../types/Answers";
+
 export const Quiz = () => {
-  const [counter, setCounter] = useState(0);
+  const [answers, setAnswers] = useState<Answers>([]);
 
   return (
     <>
-      <Question score={counter} incrementScore={setCounter} />
-      <Score score={counter} />
+      <Question answers={answers} addAnswer={setAnswers} />
+      <Score answers={answers} />
     </>
   );
 };

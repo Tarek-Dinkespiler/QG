@@ -1,21 +1,23 @@
-type Answer = "A" | "B" | "C" | "D";
+import { Answer, Answers } from "../types/Answers";
+
+const questionNumber: number = 0;
 const correctAnswer: Answer = "A";
 
 export const Question = ({
-  score,
-  incrementScore,
+  answers,
+  addAnswer,
 }: {
-  score: number;
-  incrementScore: React.Dispatch<React.SetStateAction<number>>;
+  answers: Answers;
+  addAnswer: React.Dispatch<React.SetStateAction<Answers>>;
 }) => {
   const submitAnswer = (answer: Answer) => {
-    if (answer === correctAnswer) {
-      incrementScore(score + 1);
-    }
+    answers = answers.slice();
+    answers[questionNumber] = answer === correctAnswer;
+    addAnswer(answers);
   };
 
   return (
-    <div className="flex flex-col items-center bg-primary text-dark rounded-l-lg md:flex-row md:max-w-xl">
+    <div className="flex flex-col items-center bg-primary text-dark rounded-l-lg border-r-2 border-solid border-dark md:flex-row md:max-w-xl">
       <img
         className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
         src="images/joconde.jpg"
