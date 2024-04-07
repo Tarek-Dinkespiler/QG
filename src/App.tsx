@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./styles.css";
 
 const App = () => (
   <>
-    <h1>QG</h1>
-    <p>Petit application de jeux pour Raphaël</p>
+    <h1 className="text-3xl">QG</h1>
+    <p>Petite application de jeux pour Raphaël</p>
   </>
 );
 
