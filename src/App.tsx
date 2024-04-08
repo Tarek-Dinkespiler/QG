@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./styles.css";
 import { Navbar } from "./components/Navbar";
 import { Quiz } from "./components/Quiz";
-import { Score } from "./components/Score";
 
 const App = () => (
   <div className="h-screen w-screen bg-dark flex flex-col">

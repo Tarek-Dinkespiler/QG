@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Answer, Answers } from "../types/Answers";
 
 const questionNumber: number = 0;
@@ -10,10 +11,15 @@ export const Question = ({
   answers: Answers;
   addAnswer: React.Dispatch<React.SetStateAction<Answers>>;
 }) => {
+  const [isAnswered, setIsanswered] = useState<boolean>(false);
+
   const submitAnswer = (answer: Answer) => {
+    if (isAnswered) return;
+
     answers = answers.slice();
     answers[questionNumber] = answer === correctAnswer;
     addAnswer(answers);
+    setIsanswered(true);
   };
 
   return (
