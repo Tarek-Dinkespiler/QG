@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: ["./src/**/*.{js,ts,tsx,html,css}"],
   theme: {
@@ -7,9 +9,9 @@ module.exports = {
         dark: "#343330",
         primary: "#DDE392",
         secondary: "#C36F09",
-        incorrect: "#AFBE8F",
-        failure: "#E07A5F",
-        success: "#A0CA92",
+        incorrect: "#BFBE8F",
+        failure: "#ef4444",
+        success: "#11EE22",
       },
     },
   },
