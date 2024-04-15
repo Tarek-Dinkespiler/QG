@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Answer, Answers } from "../types/Answers";
 import { Question as QuestionType } from "../types/Quiz";
 import { randomizeArray } from "../utils/randomizeArray";
+import { QuestionObject } from "./QuestionObject";
 
 export const Question = ({
   answers,
@@ -101,10 +102,7 @@ export const Question = ({
 
   return (
     <div className="flex flex-col items-center bg-white text-dark rounded-l-lg border-r-2 border-solid border-dark md:flex-row md:max-w-xl">
-      <img
-        className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-        src={`images/${question.imageName}.jpg`}
-      />
+      <QuestionObject object={question.object} />
       <div className="h-full flex flex-col justify-between p-4 leading-normal">
         <h5 className="text-2xl font-bold">{question.phrase}</h5>
         <div className="font-normal">{submitted ? Results() : Options()}</div>

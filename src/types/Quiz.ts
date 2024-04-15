@@ -1,6 +1,18 @@
+interface Image {
+  kind: "image";
+  path: string;
+}
+
+interface Text {
+  kind: "text";
+  text: string;
+}
+
+export type QuestionObject = Image | Text;
+
 export type Question = {
   phrase: string;
-  imageName: string;
+  object: QuestionObject;
   options: string[];
   solution: string;
 };

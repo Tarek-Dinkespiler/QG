@@ -9,12 +9,12 @@ import { Quiz as QuizType } from "../types/Quiz";
 const quizList: QuizType[] = [
   {
     id: "000000",
-    name: "Les grands chef d'oeuvre de la peinture",
+    name: "Icônes historiques de la peinture 1/3",
     nbOfQuestions: 5,
     questions: [
       {
         phrase: "Lequel de ces peintres a réalisé ce tableau ?",
-        imageName: "joconde",
+        object: { kind: "image", path: "joconde.jpg" },
         options: [
           "Léonard de Vinci",
           "Eugène Delacroix",
